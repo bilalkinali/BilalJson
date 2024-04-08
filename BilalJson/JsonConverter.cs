@@ -15,6 +15,7 @@ namespace BilalJson
         public JsonConverter() 
         {
             path = "C:\\Users\\Bilal Kinali\\source\\repos\\BilalJson\\BilalJson\\TopratedRelations.json";
+            movies = new List<Movie>();
         }
         public async Task<List<Movie>> Get()
         {
@@ -24,14 +25,14 @@ namespace BilalJson
 
                 if (!string.IsNullOrEmpty(txt))
                 {
-                    return new List<Movie>(JsonConvert.DeserializeObject<List<Movie>>(txt));
+                    return JsonConvert.DeserializeObject<List<Movie>>(txt);
                 }
             }
             catch (Exception)
             {
                 
             }
-            return new List<Movie>();
+            return movies;
         }
     }
 }

@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             dgv = new DataGridView();
+            lblDisplayed = new Label();
+            lblDisplayedCount = new Label();
+            lblSelectedCount = new Label();
+            lblSelected = new Label();
+            lblTotalCount = new Label();
+            lblTotal = new Label();
             ((System.ComponentModel.ISupportInitialize)dgv).BeginInit();
             SuspendLayout();
             // 
@@ -44,20 +50,84 @@
             dgv.Size = new Size(1469, 744);
             dgv.TabIndex = 0;
             // 
+            // lblDisplayed
+            // 
+            lblDisplayed.AutoSize = true;
+            lblDisplayed.Location = new Point(12, 786);
+            lblDisplayed.Name = "lblDisplayed";
+            lblDisplayed.Size = new Size(61, 15);
+            lblDisplayed.TabIndex = 1;
+            lblDisplayed.Text = "Displayed:";
+            // 
+            // lblDisplayedCount
+            // 
+            lblDisplayedCount.AutoSize = true;
+            lblDisplayedCount.Location = new Point(73, 786);
+            lblDisplayedCount.Name = "lblDisplayedCount";
+            lblDisplayedCount.Size = new Size(0, 15);
+            lblDisplayedCount.TabIndex = 2;
+            // 
+            // lblSelectedCount
+            // 
+            lblSelectedCount.AutoSize = true;
+            lblSelectedCount.Location = new Point(1458, 759);
+            lblSelectedCount.Name = "lblSelectedCount";
+            lblSelectedCount.Size = new Size(0, 15);
+            lblSelectedCount.TabIndex = 4;
+            // 
+            // lblSelected
+            // 
+            lblSelected.AutoSize = true;
+            lblSelected.Location = new Point(1406, 759);
+            lblSelected.Name = "lblSelected";
+            lblSelected.Size = new Size(54, 15);
+            lblSelected.TabIndex = 3;
+            lblSelected.Text = "Selected:";
+            // 
+            // lblTotalCount
+            // 
+            lblTotalCount.AutoSize = true;
+            lblTotalCount.Location = new Point(47, 759);
+            lblTotalCount.Name = "lblTotalCount";
+            lblTotalCount.Size = new Size(0, 15);
+            lblTotalCount.TabIndex = 6;
+            // 
+            // lblTotal
+            // 
+            lblTotal.AutoSize = true;
+            lblTotal.Location = new Point(12, 759);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new Size(35, 15);
+            lblTotal.TabIndex = 5;
+            lblTotal.Text = "Total:";
+            // 
             // moviesOverview
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1493, 859);
+            ClientSize = new Size(1493, 810);
+            Controls.Add(lblTotalCount);
+            Controls.Add(lblTotal);
+            Controls.Add(lblSelectedCount);
+            Controls.Add(lblSelected);
+            Controls.Add(lblDisplayedCount);
+            Controls.Add(lblDisplayed);
             Controls.Add(dgv);
             Name = "moviesOverview";
             Text = "Movies Overview";
             ((System.ComponentModel.ISupportInitialize)dgv).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private DataGridView dgv;
+        private Label lblDisplayed;
+        private Label lblDisplayedCount;
+        private Label lblSelectedCount;
+        private Label lblSelected;
+        private Label lblTotalCount;
+        private Label lblTotal;
     }
 }
