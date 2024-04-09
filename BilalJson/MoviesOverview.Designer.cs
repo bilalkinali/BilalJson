@@ -47,13 +47,13 @@
             dgv.Name = "dgv";
             dgv.ReadOnly = true;
             dgv.RowTemplate.Height = 25;
-            dgv.Size = new Size(1469, 744);
+            dgv.Size = new Size(1632, 656);
             dgv.TabIndex = 0;
             // 
             // lblDisplayed
             // 
             lblDisplayed.AutoSize = true;
-            lblDisplayed.Location = new Point(12, 786);
+            lblDisplayed.Location = new Point(12, 686);
             lblDisplayed.Name = "lblDisplayed";
             lblDisplayed.Size = new Size(61, 15);
             lblDisplayed.TabIndex = 1;
@@ -62,7 +62,7 @@
             // lblDisplayedCount
             // 
             lblDisplayedCount.AutoSize = true;
-            lblDisplayedCount.Location = new Point(73, 786);
+            lblDisplayedCount.Location = new Point(73, 686);
             lblDisplayedCount.Name = "lblDisplayedCount";
             lblDisplayedCount.Size = new Size(0, 15);
             lblDisplayedCount.TabIndex = 2;
@@ -70,7 +70,7 @@
             // lblSelectedCount
             // 
             lblSelectedCount.AutoSize = true;
-            lblSelectedCount.Location = new Point(1458, 759);
+            lblSelectedCount.Location = new Point(1627, 671);
             lblSelectedCount.Name = "lblSelectedCount";
             lblSelectedCount.Size = new Size(0, 15);
             lblSelectedCount.TabIndex = 4;
@@ -78,7 +78,7 @@
             // lblSelected
             // 
             lblSelected.AutoSize = true;
-            lblSelected.Location = new Point(1406, 759);
+            lblSelected.Location = new Point(1575, 671);
             lblSelected.Name = "lblSelected";
             lblSelected.Size = new Size(54, 15);
             lblSelected.TabIndex = 3;
@@ -87,7 +87,7 @@
             // lblTotalCount
             // 
             lblTotalCount.AutoSize = true;
-            lblTotalCount.Location = new Point(47, 759);
+            lblTotalCount.Location = new Point(47, 671);
             lblTotalCount.Name = "lblTotalCount";
             lblTotalCount.Size = new Size(0, 15);
             lblTotalCount.TabIndex = 6;
@@ -95,7 +95,7 @@
             // lblTotal
             // 
             lblTotal.AutoSize = true;
-            lblTotal.Location = new Point(12, 759);
+            lblTotal.Location = new Point(12, 671);
             lblTotal.Name = "lblTotal";
             lblTotal.Size = new Size(35, 15);
             lblTotal.TabIndex = 5;
@@ -105,7 +105,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1493, 810);
+            ClientSize = new Size(1656, 722);
             Controls.Add(lblTotalCount);
             Controls.Add(lblTotal);
             Controls.Add(lblSelectedCount);
