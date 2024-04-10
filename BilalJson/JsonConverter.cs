@@ -14,7 +14,7 @@ namespace BilalJson
         List<Movie> movies;
         public JsonConverter() 
         {
-            path = "C:\\Users\\Bilal Kinali\\source\\repos\\BilalJson\\BilalJson\\TopratedRelations.json";
+            path = "TopratedRelations.json";
             movies = new List<Movie>();
         }
         public async Task<List<Movie>> Get()
