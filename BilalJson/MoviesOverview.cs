@@ -5,6 +5,7 @@ namespace BilalJson
         const int pageSize = 25;
 
         JsonConverter jsonConverter;
+        MovieDetails mDetails;
         List<Movie> movies;
 
         int totalPage;
@@ -19,17 +20,29 @@ namespace BilalJson
 
             Load += MoviesOverview_Load;
 
+            // DataGridView
             dgv.SelectionChanged += Dgv_SelectionChanged;
             dgv.DataBindingComplete += Dgv_DataBindingComplete;
+            dgv.CellDoubleClick += Dgv_CellDoubleClick;
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
+            // Page navigation
             currentPage = 1;
             btnPrev.Cursor = btnNext.Cursor = Cursors.Hand;
             tboxPage.TextChanged += TboxPage_TextChanged;
             btnPrev.Click += BtnPrev_Click;
             btnNext.Click += BtnNext_Click;
             btnPrev.Enabled = false;
-            
+
+        }
+
+        private void Dgv_CellDoubleClick(object? sender, DataGridViewCellEventArgs e)
+        {
+            if (dgv.Rows[e.RowIndex].DataBoundItem is Movie movie)
+            {
+                mDetails = new MovieDetails(movie);
+                mDetails.ShowDialog();
+            }
         }
 
         private void BtnNext_Click(object? sender, EventArgs e)
