@@ -19,8 +19,6 @@ namespace BilalJson
 
             InitializeComponent();
 
-            StartPosition = FormStartPosition.CenterParent;
-
             Load += MovieDetails_Load;
         }
 
@@ -31,8 +29,16 @@ namespace BilalJson
                 lblTitel.Text = m.Title;
                 tboxOverview.Text = m.Overview;
                 tboxMovieID.Text = m.MovieId.ToString();
-                tboxRelease.Text = m.ReleaseDate.ToShortDateString();
+                lblRelease.Text = m.ReleaseDate.Year.ToString();
                 lblScoreValue.Text = m.VoteAverage.ToString();
+                pboxBackdrop.ImageLocation = m.BackdropPath;
+                pboxPoster.ImageLocation = m.PosterPath;
+                lblVoteCount.Text = m.VoteCount.ToString();
+                lblPopularityCount.Text = m.Popularity.ToString();
+                lblGenreList.Text = string.Join(", ", m.Genres.Select(x => x.Name));
+                lblOriginalLang.Text = m.OriginalLanguage.ToString();
+                lblOrgTitel.Text = m.OriginalTitle.ToString();
+                lblReleaseShortDate.Text = m.ReleaseDate.ToShortDateString();
             }
         }
     }

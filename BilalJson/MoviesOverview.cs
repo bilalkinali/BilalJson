@@ -41,7 +41,7 @@ namespace BilalJson
             if (dgv.Rows[e.RowIndex].DataBoundItem is Movie movie)
             {
                 mDetails = new MovieDetails(movie);
-                mDetails.ShowDialog();
+                mDetails.Show();
             }
         }
 
