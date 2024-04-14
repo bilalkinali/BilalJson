@@ -14,7 +14,7 @@ namespace BilalJson
         List<Movie> movies;
         public JsonConverter() 
         {
-            path = "TopratedRelations.json";
+            path = "TopratedRelations.json"; // "..\bin\Debug\net6.0-windows\TopratedRelations.json"
             movies = new List<Movie>();
         }
         public async Task<List<Movie>> Get()
@@ -30,7 +30,7 @@ namespace BilalJson
             }
             catch (Exception)
             {
-                
+
             }
             return movies;
         }

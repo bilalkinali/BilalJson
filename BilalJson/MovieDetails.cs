@@ -35,7 +35,14 @@ namespace BilalJson
                 pboxPoster.ImageLocation = m.PosterPath;
                 lblVoteCount.Text = m.VoteCount.ToString();
                 lblPopularityCount.Text = m.Popularity.ToString();
-                lblGenreList.Text = string.Join(", ", m.Genres.Select(x => x.Name));
+                try
+                {
+                    lblGenreList.Text = string.Join(", ", m.Genres.Select(x => x.Name));
+                }
+                catch (Exception)
+                {
+                    lblGenreList.Text = "None";
+                }
                 lblOriginalLang.Text = m.OriginalLanguage.ToString();
                 lblOrgTitel.Text = m.OriginalTitle.ToString();
                 lblReleaseShortDate.Text = m.ReleaseDate.ToShortDateString();

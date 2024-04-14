@@ -2,6 +2,8 @@ using System.Windows.Forms;
 
 namespace BilalJson
 {
+    // "..\bin\Debug\net6.0-windows\TopratedRelations.json"                     --*
+
     public partial class moviesOverview : Form
     {
         const int pageSize = 25;
@@ -13,7 +15,6 @@ namespace BilalJson
         int totalPage;
         int currentPage;
 
-
         public moviesOverview()
         {
             jsonConverter = new JsonConverter();
@@ -22,12 +23,12 @@ namespace BilalJson
 
             Load += MoviesOverview_Load;
 
-            // DataGridView
+            // DataGridView                                                     --*
             dgv.SelectionChanged += Dgv_SelectionChanged;
             dgv.DataBindingComplete += Dgv_DataBindingComplete;
             dgv.CellDoubleClick += Dgv_CellDoubleClick;            
 
-            // Page navigation
+            // Page navigation                                                  --*
             currentPage = 1;
             btnPrev.Cursor = btnNext.Cursor = Cursors.Hand;
             tboxPage.TextChanged += TboxPage_TextChanged;
@@ -35,8 +36,10 @@ namespace BilalJson
             btnNext.Click += BtnNext_Click;
             btnPrev.Enabled = false;
 
-            // Combobox
+            // Combobox                                                         --*
             cmbox.SelectionChangeCommitted += Cmbox_SelectionChangeCommitted;
+
+            // Add filtering options                                            --*
 
         }
 
@@ -45,27 +48,29 @@ namespace BilalJson
             switch (cmbox.SelectedItem)
             {
                 case "Rating":
-                    movies = movies.OrderByDescending(m => m.VoteAverage).ThenByDescending(m => m.Title).ToList();
+                    movies = movies.OrderByDescending(m => m.VoteAverage).ThenBy(m => m.Id).ToList();
                     break;
                 case "Title":
                     movies = movies.OrderBy(m => m.Title).ToList();
                     break;
                 case "Release date":
-                    movies = movies.OrderByDescending(m => m.ReleaseDate).ToList();
+                    movies = movies.OrderByDescending(m => m.ReleaseDate).ThenBy(m => m.Id).ToList();
                     break;
                 case "Popularity":
                     movies = movies.OrderByDescending(m => m.Popularity).ToList();
                     break;
             }
+            // Defaults to front page
             currentPage = 1;
             LoadPage(currentPage);
         }
 
         private void Dgv_CellDoubleClick(object? sender, DataGridViewCellEventArgs e)
         {
-
+            // Skip the headers
             if (e.RowIndex >= 0)
             {
+                // Open data bount object
                 if (dgv.Rows[e.RowIndex].DataBoundItem is Movie movie)
                 {
                     mDetails = new MovieDetails(movie);
@@ -76,6 +81,7 @@ namespace BilalJson
 
         private void BtnNext_Click(object? sender, EventArgs e)
         {
+            // If field is empty and button is pressed, show first page
             if (string.IsNullOrEmpty(tboxPage.Text))
                 tboxPage.Text = "1";
             else
@@ -84,6 +90,7 @@ namespace BilalJson
 
         private void BtnPrev_Click(object? sender, EventArgs e)
         {
+            // If field is empty and button is pressed, show last page
             if (string.IsNullOrEmpty(tboxPage.Text))
                 tboxPage.Text = totalPage.ToString();
             else
@@ -92,8 +99,10 @@ namespace BilalJson
 
         private void TboxPage_TextChanged(object? sender, EventArgs e)
         {
+            // Reject non-digit input
             bool digit = int.TryParse(tboxPage.Text, out currentPage);
 
+            // Manage prev / next button according to the current page
             if (digit && currentPage >= 1 && currentPage <= totalPage)
             {
                 btnPrev.Enabled = currentPage != 1;
@@ -125,6 +134,7 @@ namespace BilalJson
             movies = new List<Movie>(await jsonConverter.Get());
             if (movies != null)
             {
+                // Calculate total pages
                 totalPage = (movies.Count + pageSize - 1) / pageSize;
 
                 // Sorting : Combobox
@@ -143,6 +153,7 @@ namespace BilalJson
         {
             if (movies != null)
             {
+                // Paging
                 dgv.DataSource = movies.Skip((page - 1) * pageSize).Take(pageSize).ToList();
                 tboxPage.Text = currentPage.ToString();
                 OrganizeDgv();
@@ -182,7 +193,7 @@ namespace BilalJson
                 dgv.Columns["OriginalTitle"].DisplayIndex = 7;
 
                 dgv.Columns["MovieId"].HeaderText = "Movie id";
-                dgv.Columns["MovieId"].DisplayIndex = 8; 
+                dgv.Columns["MovieId"].DisplayIndex = 8;
             }
         }
     }
