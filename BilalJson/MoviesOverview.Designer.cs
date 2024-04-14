@@ -40,6 +40,8 @@
             tboxPage = new TextBox();
             lblPages = new Label();
             lblPagesCount = new Label();
+            cmbox = new ComboBox();
+            lblSort = new Label();
             ((System.ComponentModel.ISupportInitialize)dgv).BeginInit();
             SuspendLayout();
             // 
@@ -47,18 +49,19 @@
             // 
             dgv.AllowUserToAddRows = false;
             dgv.AllowUserToDeleteRows = false;
+            dgv.AllowUserToResizeRows = false;
             dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv.Location = new Point(24, 21);
+            dgv.Location = new Point(24, 40);
             dgv.Name = "dgv";
             dgv.ReadOnly = true;
             dgv.RowTemplate.Height = 25;
-            dgv.Size = new Size(1012, 656);
+            dgv.Size = new Size(1012, 654);
             dgv.TabIndex = 0;
             // 
             // lblDisplayed
             // 
             lblDisplayed.AutoSize = true;
-            lblDisplayed.Location = new Point(961, 700);
+            lblDisplayed.Location = new Point(961, 717);
             lblDisplayed.Name = "lblDisplayed";
             lblDisplayed.Size = new Size(61, 15);
             lblDisplayed.TabIndex = 1;
@@ -67,7 +70,7 @@
             // lblDisplayedCount
             // 
             lblDisplayedCount.AutoSize = true;
-            lblDisplayedCount.Location = new Point(1022, 700);
+            lblDisplayedCount.Location = new Point(1022, 717);
             lblDisplayedCount.Name = "lblDisplayedCount";
             lblDisplayedCount.Size = new Size(0, 15);
             lblDisplayedCount.TabIndex = 2;
@@ -75,7 +78,7 @@
             // lblSelectedCount
             // 
             lblSelectedCount.AutoSize = true;
-            lblSelectedCount.Location = new Point(1022, 680);
+            lblSelectedCount.Location = new Point(1022, 697);
             lblSelectedCount.Name = "lblSelectedCount";
             lblSelectedCount.Size = new Size(0, 15);
             lblSelectedCount.TabIndex = 4;
@@ -83,7 +86,7 @@
             // lblSelected
             // 
             lblSelected.AutoSize = true;
-            lblSelected.Location = new Point(970, 680);
+            lblSelected.Location = new Point(970, 697);
             lblSelected.Name = "lblSelected";
             lblSelected.Size = new Size(54, 15);
             lblSelected.TabIndex = 3;
@@ -92,7 +95,7 @@
             // lblTotalCount
             // 
             lblTotalCount.AutoSize = true;
-            lblTotalCount.Location = new Point(59, 680);
+            lblTotalCount.Location = new Point(59, 697);
             lblTotalCount.Name = "lblTotalCount";
             lblTotalCount.Size = new Size(0, 15);
             lblTotalCount.TabIndex = 6;
@@ -100,7 +103,7 @@
             // lblTotal
             // 
             lblTotal.AutoSize = true;
-            lblTotal.Location = new Point(24, 680);
+            lblTotal.Location = new Point(24, 697);
             lblTotal.Name = "lblTotal";
             lblTotal.Size = new Size(35, 15);
             lblTotal.TabIndex = 5;
@@ -109,7 +112,7 @@
             // btnNext
             // 
             btnNext.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnNext.Location = new Point(560, 690);
+            btnNext.Location = new Point(560, 707);
             btnNext.Name = "btnNext";
             btnNext.Size = new Size(25, 25);
             btnNext.TabIndex = 7;
@@ -119,7 +122,7 @@
             // btnPrev
             // 
             btnPrev.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnPrev.Location = new Point(480, 690);
+            btnPrev.Location = new Point(480, 707);
             btnPrev.Name = "btnPrev";
             btnPrev.Size = new Size(25, 25);
             btnPrev.TabIndex = 8;
@@ -130,7 +133,7 @@
             // 
             tboxPage.BackColor = SystemColors.ControlLightLight;
             tboxPage.BorderStyle = BorderStyle.None;
-            tboxPage.Location = new Point(513, 695);
+            tboxPage.Location = new Point(513, 712);
             tboxPage.Name = "tboxPage";
             tboxPage.Size = new Size(40, 16);
             tboxPage.TabIndex = 9;
@@ -140,7 +143,7 @@
             // lblPages
             // 
             lblPages.AutoSize = true;
-            lblPages.Location = new Point(24, 700);
+            lblPages.Location = new Point(24, 717);
             lblPages.Name = "lblPages";
             lblPages.Size = new Size(41, 15);
             lblPages.TabIndex = 10;
@@ -149,16 +152,37 @@
             // lblPagesCount
             // 
             lblPagesCount.AutoSize = true;
-            lblPagesCount.Location = new Point(65, 700);
+            lblPagesCount.Location = new Point(65, 717);
             lblPagesCount.Name = "lblPagesCount";
             lblPagesCount.Size = new Size(0, 15);
             lblPagesCount.TabIndex = 11;
+            // 
+            // cmbox
+            // 
+            cmbox.Cursor = Cursors.Hand;
+            cmbox.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbox.FormattingEnabled = true;
+            cmbox.Location = new Point(915, 11);
+            cmbox.Name = "cmbox";
+            cmbox.Size = new Size(121, 23);
+            cmbox.TabIndex = 12;
+            // 
+            // lblSort
+            // 
+            lblSort.AutoSize = true;
+            lblSort.Location = new Point(865, 14);
+            lblSort.Name = "lblSort";
+            lblSort.Size = new Size(44, 15);
+            lblSort.TabIndex = 13;
+            lblSort.Text = "Sort by";
             // 
             // moviesOverview
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1062, 732);
+            ClientSize = new Size(1062, 754);
+            Controls.Add(lblSort);
+            Controls.Add(cmbox);
             Controls.Add(lblPagesCount);
             Controls.Add(lblPages);
             Controls.Add(tboxPage);
@@ -195,5 +219,7 @@
         private TextBox tboxPage;
         private Label lblPages;
         private Label lblPagesCount;
+        private ComboBox cmbox;
+        private Label lblSort;
     }
 }

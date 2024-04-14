@@ -25,7 +25,7 @@ namespace BilalJson
 
                 if (!string.IsNullOrEmpty(txt))
                 {
-                    return JsonConvert.DeserializeObject<List<Movie>>(txt);
+                    return JsonConvert.DeserializeObject<List<Movie>>(txt).DistinctBy(m => m.MovieId).ToList();
                 }
             }
             catch (Exception)

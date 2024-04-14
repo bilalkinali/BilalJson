@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace BilalJson
 {
     public partial class moviesOverview : Form
@@ -23,8 +25,7 @@ namespace BilalJson
             // DataGridView
             dgv.SelectionChanged += Dgv_SelectionChanged;
             dgv.DataBindingComplete += Dgv_DataBindingComplete;
-            dgv.CellDoubleClick += Dgv_CellDoubleClick;
-            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.CellDoubleClick += Dgv_CellDoubleClick;            
 
             // Page navigation
             currentPage = 1;
@@ -34,14 +35,42 @@ namespace BilalJson
             btnNext.Click += BtnNext_Click;
             btnPrev.Enabled = false;
 
+            // Combobox
+            cmbox.SelectionChangeCommitted += Cmbox_SelectionChangeCommitted;
+
+        }
+
+        private void Cmbox_SelectionChangeCommitted(object? sender, EventArgs e)
+        {
+            switch (cmbox.SelectedItem)
+            {
+                case "Rating":
+                    movies = movies.OrderByDescending(m => m.VoteAverage).ThenByDescending(m => m.Title).ToList();
+                    break;
+                case "Title":
+                    movies = movies.OrderBy(m => m.Title).ToList();
+                    break;
+                case "Release date":
+                    movies = movies.OrderByDescending(m => m.ReleaseDate).ToList();
+                    break;
+                case "Popularity":
+                    movies = movies.OrderByDescending(m => m.Popularity).ToList();
+                    break;
+            }
+            currentPage = 1;
+            LoadPage(currentPage);
         }
 
         private void Dgv_CellDoubleClick(object? sender, DataGridViewCellEventArgs e)
         {
-            if (dgv.Rows[e.RowIndex].DataBoundItem is Movie movie)
+
+            if (e.RowIndex >= 0)
             {
-                mDetails = new MovieDetails(movie);
-                mDetails.Show();
+                if (dgv.Rows[e.RowIndex].DataBoundItem is Movie movie)
+                {
+                    mDetails = new MovieDetails(movie);
+                    mDetails.Show();
+                } 
             }
         }
 
@@ -96,9 +125,18 @@ namespace BilalJson
             movies = new List<Movie>(await jsonConverter.Get());
             if (movies != null)
             {
-                totalPage = movies.Count / pageSize;
+                totalPage = (movies.Count + pageSize - 1) / pageSize;
+
+                // Sorting : Combobox
+                cmbox.Items.Insert(0, "Rating");
+                cmbox.Items.Add("Title");
+                cmbox.Items.Add("Release date");
+                cmbox.Items.Add("Popularity");
+                cmbox.SelectedIndex = 0;
+
+                LoadPage(currentPage);
+                OrganizeDgv();
             }
-            LoadPage(currentPage);
         }
 
         private void LoadPage(int page)
@@ -106,19 +144,45 @@ namespace BilalJson
             if (movies != null)
             {
                 dgv.DataSource = movies.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+                tboxPage.Text = currentPage.ToString();
+                OrganizeDgv();
+            }
+        }
+
+        private void OrganizeDgv()
+        {
+            if (movies != null)
+            {
+                dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
                 dgv.Columns["Id"].Visible = dgv.Columns["Video"].Visible = dgv.Columns["Adult"].Visible =
                 dgv.Columns["PosterPath"].Visible = dgv.Columns["BackdropPath"].Visible = false;
 
+                
                 dgv.Columns["Title"].DisplayIndex = 0;
+
                 dgv.Columns["Overview"].DisplayIndex = 1;
+
+                dgv.Columns["ReleaseDate"].HeaderText = "Release";
                 dgv.Columns["ReleaseDate"].DisplayIndex = 2;
-                dgv.Columns["VoteAverage"].DisplayIndex = 3;
-                dgv.Columns["VoteCount"].DisplayIndex = 4;
-                dgv.Columns["OriginalLanguage"].DisplayIndex = 5;
+
+                dgv.Columns["OriginalLanguage"].HeaderText = "Origin";
+                dgv.Columns["OriginalLanguage"].DisplayIndex = 3;
+
+                dgv.Columns["VoteAverage"].HeaderText = "Rating";
+                dgv.Columns["VoteAverage"].DisplayIndex = 4;
+
+                dgv.Columns["VoteCount"].HeaderText = "Votes";
+                dgv.Columns["VoteCount"].DisplayIndex = 5;
+
                 dgv.Columns["Popularity"].DisplayIndex = 6;
+
+                dgv.Columns["OriginalTitle"].HeaderText = "Original title";
                 dgv.Columns["OriginalTitle"].DisplayIndex = 7;
-                dgv.Columns["MovieId"].DisplayIndex = 8;
+
+                dgv.Columns["MovieId"].HeaderText = "Movie id";
+                dgv.Columns["MovieId"].DisplayIndex = 8; 
             }
         }
     }

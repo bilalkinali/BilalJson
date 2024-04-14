@@ -325,7 +325,7 @@
             // 
             lblVoteCount.AutoSize = true;
             lblVoteCount.Font = new Font("Source Sans Pro", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            lblVoteCount.Location = new Point(626, 54);
+            lblVoteCount.Location = new Point(628, 52);
             lblVoteCount.Name = "lblVoteCount";
             lblVoteCount.Size = new Size(43, 18);
             lblVoteCount.TabIndex = 60;
@@ -346,7 +346,7 @@
             // 
             lblPopularityCount.AutoSize = true;
             lblPopularityCount.Font = new Font("Source Sans Pro", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            lblPopularityCount.Location = new Point(722, 55);
+            lblPopularityCount.Location = new Point(722, 53);
             lblPopularityCount.Name = "lblPopularityCount";
             lblPopularityCount.Size = new Size(43, 18);
             lblPopularityCount.TabIndex = 62;
