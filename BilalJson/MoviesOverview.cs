@@ -19,6 +19,10 @@ namespace BilalJson
         {
             jsonConverter = new JsonConverter();
 
+            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+
             InitializeComponent();
 
             Load += MoviesOverview_Load;
