@@ -30,21 +30,22 @@
         {
             lblTitel = new Label();
             pnlDetails = new Panel();
+            panel1 = new Panel();
+            lblAdult = new Label();
+            cboxAdult = new CheckBox();
+            lblGenre = new Label();
+            lblGenreList = new Label();
+            cboxVideo = new CheckBox();
+            lblLang = new Label();
+            lblOriginalLang = new Label();
+            lblOriginalTitle = new Label();
+            lblOrgTitel = new Label();
+            lblVideo = new Label();
+            lblReleaseDate = new Label();
+            lblReleaseShortDate = new Label();
             lblOverview = new Label();
             pboxBackdrop = new PictureBox();
             tboxOverview = new TextBox();
-            cboxAdult = new CheckBox();
-            cboxVideo = new CheckBox();
-            lblAdult = new Label();
-            lblVideo = new Label();
-            lblReleaseShortDate = new Label();
-            lblReleaseDate = new Label();
-            lblOrgTitel = new Label();
-            lblOriginalTitle = new Label();
-            lblOriginalLang = new Label();
-            lblLang = new Label();
-            lblGenreList = new Label();
-            lblGenre = new Label();
             lblRelease = new Label();
             tboxMovieID = new TextBox();
             lblScoreValue = new Label();
@@ -55,11 +56,10 @@
             lblVoteCount = new Label();
             lblPopularity = new Label();
             lblPopularityCount = new Label();
-            panel1 = new Panel();
             pnlDetails.SuspendLayout();
+            panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pboxBackdrop).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxPoster).BeginInit();
-            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // lblTitel
@@ -83,6 +83,149 @@
             pnlDetails.Name = "pnlDetails";
             pnlDetails.Size = new Size(486, 510);
             pnlDetails.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(lblAdult);
+            panel1.Controls.Add(cboxAdult);
+            panel1.Controls.Add(lblGenre);
+            panel1.Controls.Add(lblGenreList);
+            panel1.Controls.Add(cboxVideo);
+            panel1.Controls.Add(lblLang);
+            panel1.Controls.Add(lblOriginalLang);
+            panel1.Controls.Add(lblOriginalTitle);
+            panel1.Controls.Add(lblOrgTitel);
+            panel1.Controls.Add(lblVideo);
+            panel1.Controls.Add(lblReleaseDate);
+            panel1.Controls.Add(lblReleaseShortDate);
+            panel1.Location = new Point(-1, 391);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(486, 118);
+            panel1.TabIndex = 53;
+            // 
+            // lblAdult
+            // 
+            lblAdult.AutoSize = true;
+            lblAdult.Font = new Font("Source Sans Pro Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAdult.Location = new Point(80, 85);
+            lblAdult.Name = "lblAdult";
+            lblAdult.Size = new Size(41, 18);
+            lblAdult.TabIndex = 71;
+            lblAdult.Text = "Adult";
+            // 
+            // cboxAdult
+            // 
+            cboxAdult.AutoCheck = false;
+            cboxAdult.AutoSize = true;
+            cboxAdult.Enabled = false;
+            cboxAdult.Location = new Point(123, 88);
+            cboxAdult.Name = "cboxAdult";
+            cboxAdult.Size = new Size(15, 14);
+            cboxAdult.TabIndex = 73;
+            cboxAdult.UseVisualStyleBackColor = true;
+            // 
+            // lblGenre
+            // 
+            lblGenre.AutoSize = true;
+            lblGenre.Font = new Font("Source Sans Pro Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblGenre.Location = new Point(6, 9);
+            lblGenre.Name = "lblGenre";
+            lblGenre.Size = new Size(48, 18);
+            lblGenre.TabIndex = 53;
+            lblGenre.Text = "Genre:";
+            // 
+            // lblGenreList
+            // 
+            lblGenreList.AutoSize = true;
+            lblGenreList.Font = new Font("Source Sans Pro", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lblGenreList.Location = new Point(50, 9);
+            lblGenreList.Name = "lblGenreList";
+            lblGenreList.Padding = new Padding(10, 0, 0, 0);
+            lblGenreList.Size = new Size(81, 18);
+            lblGenreList.TabIndex = 63;
+            lblGenreList.Text = "Test, Test2";
+            // 
+            // cboxVideo
+            // 
+            cboxVideo.AutoCheck = false;
+            cboxVideo.AutoSize = true;
+            cboxVideo.Enabled = false;
+            cboxVideo.Location = new Point(50, 88);
+            cboxVideo.Name = "cboxVideo";
+            cboxVideo.Size = new Size(15, 14);
+            cboxVideo.TabIndex = 72;
+            cboxVideo.UseVisualStyleBackColor = true;
+            // 
+            // lblLang
+            // 
+            lblLang.AutoSize = true;
+            lblLang.Font = new Font("Source Sans Pro Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblLang.Location = new Point(6, 47);
+            lblLang.Name = "lblLang";
+            lblLang.Size = new Size(95, 18);
+            lblLang.TabIndex = 64;
+            lblLang.Text = "Org. language:";
+            // 
+            // lblOriginalLang
+            // 
+            lblOriginalLang.AutoSize = true;
+            lblOriginalLang.Font = new Font("Source Sans Pro", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lblOriginalLang.Location = new Point(97, 47);
+            lblOriginalLang.Name = "lblOriginalLang";
+            lblOriginalLang.Size = new Size(71, 18);
+            lblOriginalLang.TabIndex = 65;
+            lblOriginalLang.Text = "Test, Test2";
+            // 
+            // lblOriginalTitle
+            // 
+            lblOriginalTitle.AutoSize = true;
+            lblOriginalTitle.Font = new Font("Source Sans Pro Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblOriginalTitle.Location = new Point(6, 28);
+            lblOriginalTitle.Name = "lblOriginalTitle";
+            lblOriginalTitle.Size = new Size(65, 18);
+            lblOriginalTitle.TabIndex = 66;
+            lblOriginalTitle.Text = "Org. title:";
+            // 
+            // lblOrgTitel
+            // 
+            lblOrgTitel.AutoSize = true;
+            lblOrgTitel.Font = new Font("Source Sans Pro", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lblOrgTitel.Location = new Point(68, 28);
+            lblOrgTitel.Name = "lblOrgTitel";
+            lblOrgTitel.Size = new Size(71, 18);
+            lblOrgTitel.TabIndex = 67;
+            lblOrgTitel.Text = "Test, Test2";
+            // 
+            // lblVideo
+            // 
+            lblVideo.AutoSize = true;
+            lblVideo.Font = new Font("Source Sans Pro Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblVideo.Location = new Point(6, 85);
+            lblVideo.Name = "lblVideo";
+            lblVideo.Size = new Size(43, 18);
+            lblVideo.TabIndex = 70;
+            lblVideo.Text = "Video";
+            // 
+            // lblReleaseDate
+            // 
+            lblReleaseDate.AutoSize = true;
+            lblReleaseDate.Font = new Font("Source Sans Pro Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblReleaseDate.Location = new Point(6, 66);
+            lblReleaseDate.Name = "lblReleaseDate";
+            lblReleaseDate.Size = new Size(88, 18);
+            lblReleaseDate.TabIndex = 68;
+            lblReleaseDate.Text = "Release date:";
+            // 
+            // lblReleaseShortDate
+            // 
+            lblReleaseShortDate.AutoSize = true;
+            lblReleaseShortDate.Font = new Font("Source Sans Pro", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lblReleaseShortDate.Location = new Point(91, 66);
+            lblReleaseShortDate.Name = "lblReleaseShortDate";
+            lblReleaseShortDate.Size = new Size(71, 18);
+            lblReleaseShortDate.TabIndex = 69;
+            lblReleaseShortDate.Text = "Test, Test2";
             // 
             // lblOverview
             // 
@@ -115,128 +258,6 @@
             tboxOverview.Size = new Size(476, 64);
             tboxOverview.TabIndex = 50;
             tboxOverview.TabStop = false;
-            // 
-            // cboxAdult
-            // 
-            cboxAdult.AutoCheck = false;
-            cboxAdult.AutoSize = true;
-            cboxAdult.Enabled = false;
-            cboxAdult.Location = new Point(123, 88);
-            cboxAdult.Name = "cboxAdult";
-            cboxAdult.Size = new Size(15, 14);
-            cboxAdult.TabIndex = 73;
-            cboxAdult.UseVisualStyleBackColor = true;
-            // 
-            // cboxVideo
-            // 
-            cboxVideo.AutoCheck = false;
-            cboxVideo.AutoSize = true;
-            cboxVideo.Enabled = false;
-            cboxVideo.Location = new Point(50, 88);
-            cboxVideo.Name = "cboxVideo";
-            cboxVideo.Size = new Size(15, 14);
-            cboxVideo.TabIndex = 72;
-            cboxVideo.UseVisualStyleBackColor = true;
-            // 
-            // lblAdult
-            // 
-            lblAdult.AutoSize = true;
-            lblAdult.Font = new Font("Source Sans Pro Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lblAdult.Location = new Point(80, 85);
-            lblAdult.Name = "lblAdult";
-            lblAdult.Size = new Size(41, 18);
-            lblAdult.TabIndex = 71;
-            lblAdult.Text = "Adult";
-            // 
-            // lblVideo
-            // 
-            lblVideo.AutoSize = true;
-            lblVideo.Font = new Font("Source Sans Pro Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lblVideo.Location = new Point(6, 85);
-            lblVideo.Name = "lblVideo";
-            lblVideo.Size = new Size(43, 18);
-            lblVideo.TabIndex = 70;
-            lblVideo.Text = "Video";
-            // 
-            // lblReleaseShortDate
-            // 
-            lblReleaseShortDate.AutoSize = true;
-            lblReleaseShortDate.Font = new Font("Source Sans Pro", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            lblReleaseShortDate.Location = new Point(91, 66);
-            lblReleaseShortDate.Name = "lblReleaseShortDate";
-            lblReleaseShortDate.Size = new Size(71, 18);
-            lblReleaseShortDate.TabIndex = 69;
-            lblReleaseShortDate.Text = "Test, Test2";
-            // 
-            // lblReleaseDate
-            // 
-            lblReleaseDate.AutoSize = true;
-            lblReleaseDate.Font = new Font("Source Sans Pro Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lblReleaseDate.Location = new Point(6, 66);
-            lblReleaseDate.Name = "lblReleaseDate";
-            lblReleaseDate.Size = new Size(88, 18);
-            lblReleaseDate.TabIndex = 68;
-            lblReleaseDate.Text = "Release date:";
-            // 
-            // lblOrgTitel
-            // 
-            lblOrgTitel.AutoSize = true;
-            lblOrgTitel.Font = new Font("Source Sans Pro", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            lblOrgTitel.Location = new Point(68, 28);
-            lblOrgTitel.Name = "lblOrgTitel";
-            lblOrgTitel.Size = new Size(71, 18);
-            lblOrgTitel.TabIndex = 67;
-            lblOrgTitel.Text = "Test, Test2";
-            // 
-            // lblOriginalTitle
-            // 
-            lblOriginalTitle.AutoSize = true;
-            lblOriginalTitle.Font = new Font("Source Sans Pro Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lblOriginalTitle.Location = new Point(6, 28);
-            lblOriginalTitle.Name = "lblOriginalTitle";
-            lblOriginalTitle.Size = new Size(65, 18);
-            lblOriginalTitle.TabIndex = 66;
-            lblOriginalTitle.Text = "Org. title:";
-            // 
-            // lblOriginalLang
-            // 
-            lblOriginalLang.AutoSize = true;
-            lblOriginalLang.Font = new Font("Source Sans Pro", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            lblOriginalLang.Location = new Point(97, 47);
-            lblOriginalLang.Name = "lblOriginalLang";
-            lblOriginalLang.Size = new Size(71, 18);
-            lblOriginalLang.TabIndex = 65;
-            lblOriginalLang.Text = "Test, Test2";
-            // 
-            // lblLang
-            // 
-            lblLang.AutoSize = true;
-            lblLang.Font = new Font("Source Sans Pro Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lblLang.Location = new Point(6, 47);
-            lblLang.Name = "lblLang";
-            lblLang.Size = new Size(95, 18);
-            lblLang.TabIndex = 64;
-            lblLang.Text = "Org. language:";
-            // 
-            // lblGenreList
-            // 
-            lblGenreList.AutoSize = true;
-            lblGenreList.Font = new Font("Source Sans Pro", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            lblGenreList.Location = new Point(50, 9);
-            lblGenreList.Name = "lblGenreList";
-            lblGenreList.Size = new Size(71, 18);
-            lblGenreList.TabIndex = 63;
-            lblGenreList.Text = "Test, Test2";
-            // 
-            // lblGenre
-            // 
-            lblGenre.AutoSize = true;
-            lblGenre.Font = new Font("Source Sans Pro Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lblGenre.Location = new Point(6, 9);
-            lblGenre.Name = "lblGenre";
-            lblGenre.Size = new Size(48, 18);
-            lblGenre.TabIndex = 53;
-            lblGenre.Text = "Genre:";
             // 
             // lblRelease
             // 
@@ -344,26 +365,6 @@
             lblPopularityCount.Text = "52522";
             lblPopularityCount.TextAlign = ContentAlignment.TopCenter;
             // 
-            // panel1
-            // 
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(lblAdult);
-            panel1.Controls.Add(cboxAdult);
-            panel1.Controls.Add(lblGenre);
-            panel1.Controls.Add(lblGenreList);
-            panel1.Controls.Add(cboxVideo);
-            panel1.Controls.Add(lblLang);
-            panel1.Controls.Add(lblOriginalLang);
-            panel1.Controls.Add(lblOriginalTitle);
-            panel1.Controls.Add(lblOrgTitel);
-            panel1.Controls.Add(lblVideo);
-            panel1.Controls.Add(lblReleaseDate);
-            panel1.Controls.Add(lblReleaseShortDate);
-            panel1.Location = new Point(-1, 391);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(486, 118);
-            panel1.TabIndex = 53;
-            // 
             // MovieDetails
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -388,10 +389,10 @@
             Text = "Movie Details";
             pnlDetails.ResumeLayout(false);
             pnlDetails.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pboxBackdrop).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pboxPoster).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pboxBackdrop).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxPoster).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
