@@ -197,7 +197,6 @@
             // 
             // lblGenreList
             // 
-            lblGenreList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblGenreList.AutoSize = true;
             lblGenreList.Font = new Font("Source Sans Pro", 10F, FontStyle.Regular, GraphicsUnit.Point);
             lblGenreList.Location = new Point(47, 400);
@@ -208,7 +207,6 @@
             // 
             // lblGenre
             // 
-            lblGenre.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblGenre.AutoSize = true;
             lblGenre.Font = new Font("Source Sans Pro Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lblGenre.Location = new Point(3, 400);

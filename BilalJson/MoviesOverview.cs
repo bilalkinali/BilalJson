@@ -22,9 +22,9 @@ namespace BilalJson
             //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-
+            float test = (float)DeviceDpi / 96;
             InitializeComponent();
-
+            test = (float)DeviceDpi / 96;
             Load += MoviesOverview_Load;
 
             // DataGridView                                                     --*
