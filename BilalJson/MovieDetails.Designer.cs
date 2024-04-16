@@ -107,10 +107,10 @@
             // lblAdult
             // 
             lblAdult.AutoSize = true;
-            lblAdult.Font = new Font("Source Sans Pro Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAdult.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             lblAdult.Location = new Point(80, 85);
             lblAdult.Name = "lblAdult";
-            lblAdult.Size = new Size(41, 18);
+            lblAdult.Size = new Size(31, 13);
             lblAdult.TabIndex = 71;
             lblAdult.Text = "Adult";
             // 
@@ -119,7 +119,8 @@
             cboxAdult.AutoCheck = false;
             cboxAdult.AutoSize = true;
             cboxAdult.Enabled = false;
-            cboxAdult.Location = new Point(123, 88);
+            cboxAdult.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cboxAdult.Location = new Point(112, 85);
             cboxAdult.Name = "cboxAdult";
             cboxAdult.Size = new Size(15, 14);
             cboxAdult.TabIndex = 73;
@@ -128,21 +129,21 @@
             // lblGenre
             // 
             lblGenre.AutoSize = true;
-            lblGenre.Font = new Font("Source Sans Pro Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblGenre.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             lblGenre.Location = new Point(6, 9);
             lblGenre.Name = "lblGenre";
-            lblGenre.Size = new Size(48, 18);
+            lblGenre.Size = new Size(39, 13);
             lblGenre.TabIndex = 53;
             lblGenre.Text = "Genre:";
             // 
             // lblGenreList
             // 
             lblGenreList.AutoSize = true;
-            lblGenreList.Font = new Font("Source Sans Pro", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            lblGenreList.Location = new Point(50, 9);
+            lblGenreList.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblGenreList.Location = new Point(43, 9);
             lblGenreList.Name = "lblGenreList";
             lblGenreList.Padding = new Padding(10, 0, 0, 0);
-            lblGenreList.Size = new Size(81, 18);
+            lblGenreList.Size = new Size(71, 13);
             lblGenreList.TabIndex = 63;
             lblGenreList.Text = "Test, Test2";
             // 
@@ -151,7 +152,8 @@
             cboxVideo.AutoCheck = false;
             cboxVideo.AutoSize = true;
             cboxVideo.Enabled = false;
-            cboxVideo.Location = new Point(50, 88);
+            cboxVideo.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cboxVideo.Location = new Point(40, 85);
             cboxVideo.Name = "cboxVideo";
             cboxVideo.Size = new Size(15, 14);
             cboxVideo.TabIndex = 72;
@@ -160,70 +162,70 @@
             // lblLang
             // 
             lblLang.AutoSize = true;
-            lblLang.Font = new Font("Source Sans Pro Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblLang.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             lblLang.Location = new Point(6, 47);
             lblLang.Name = "lblLang";
-            lblLang.Size = new Size(95, 18);
+            lblLang.Size = new Size(77, 13);
             lblLang.TabIndex = 64;
             lblLang.Text = "Org. language:";
             // 
             // lblOriginalLang
             // 
             lblOriginalLang.AutoSize = true;
-            lblOriginalLang.Font = new Font("Source Sans Pro", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            lblOriginalLang.Location = new Point(97, 47);
+            lblOriginalLang.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblOriginalLang.Location = new Point(81, 47);
             lblOriginalLang.Name = "lblOriginalLang";
-            lblOriginalLang.Size = new Size(71, 18);
+            lblOriginalLang.Size = new Size(61, 13);
             lblOriginalLang.TabIndex = 65;
             lblOriginalLang.Text = "Test, Test2";
             // 
             // lblOriginalTitle
             // 
             lblOriginalTitle.AutoSize = true;
-            lblOriginalTitle.Font = new Font("Source Sans Pro Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblOriginalTitle.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             lblOriginalTitle.Location = new Point(6, 28);
             lblOriginalTitle.Name = "lblOriginalTitle";
-            lblOriginalTitle.Size = new Size(65, 18);
+            lblOriginalTitle.Size = new Size(49, 13);
             lblOriginalTitle.TabIndex = 66;
             lblOriginalTitle.Text = "Org. title:";
             // 
             // lblOrgTitel
             // 
             lblOrgTitel.AutoSize = true;
-            lblOrgTitel.Font = new Font("Source Sans Pro", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            lblOrgTitel.Location = new Point(68, 28);
+            lblOrgTitel.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblOrgTitel.Location = new Point(54, 28);
             lblOrgTitel.Name = "lblOrgTitel";
-            lblOrgTitel.Size = new Size(71, 18);
+            lblOrgTitel.Size = new Size(61, 13);
             lblOrgTitel.TabIndex = 67;
             lblOrgTitel.Text = "Test, Test2";
             // 
             // lblVideo
             // 
             lblVideo.AutoSize = true;
-            lblVideo.Font = new Font("Source Sans Pro Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblVideo.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             lblVideo.Location = new Point(6, 85);
             lblVideo.Name = "lblVideo";
-            lblVideo.Size = new Size(43, 18);
+            lblVideo.Size = new Size(34, 13);
             lblVideo.TabIndex = 70;
             lblVideo.Text = "Video";
             // 
             // lblReleaseDate
             // 
             lblReleaseDate.AutoSize = true;
-            lblReleaseDate.Font = new Font("Source Sans Pro Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblReleaseDate.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             lblReleaseDate.Location = new Point(6, 66);
             lblReleaseDate.Name = "lblReleaseDate";
-            lblReleaseDate.Size = new Size(88, 18);
+            lblReleaseDate.Size = new Size(73, 13);
             lblReleaseDate.TabIndex = 68;
             lblReleaseDate.Text = "Release date:";
             // 
             // lblReleaseShortDate
             // 
             lblReleaseShortDate.AutoSize = true;
-            lblReleaseShortDate.Font = new Font("Source Sans Pro", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            lblReleaseShortDate.Location = new Point(91, 66);
+            lblReleaseShortDate.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblReleaseShortDate.Location = new Point(77, 66);
             lblReleaseShortDate.Name = "lblReleaseShortDate";
-            lblReleaseShortDate.Size = new Size(71, 18);
+            lblReleaseShortDate.Size = new Size(61, 13);
             lblReleaseShortDate.TabIndex = 69;
             lblReleaseShortDate.Text = "Test, Test2";
             // 
